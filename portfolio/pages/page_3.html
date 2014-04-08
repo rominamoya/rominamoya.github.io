@@ -1,0 +1,69 @@
+
+
+  
+  <script type="text/javascript" src="jquery.form.js"></script> 
+ 
+<h2 class="contact">Contactame</h2>
+    		<div id="result"></div>
+    		<div id="fields"><p>
+         Para contactarse conmigo, por favor llene el siguiente formulario. </p>
+    		   
+    		
+    		  <form method="post" action="action.php" onSubmit="return limpiar()" id="fo3" name="fo3"  > 
+    		    
+    		    <p><label for="name">Nombre</label></p> 
+    			  <input type="text"  id="nombre" name="nombre" class="required" minlength="2" title="Ingese su Nombre" /> 
+    		    
+    		    <p><label for="email">Email</label></p> 
+    			  <input type="text" id="email" name="email" class="required email"   title="Ingrese un mail v&aacute;lido" /> 
+    		    
+    		    <p><label for="comment">Su Mensaje</label></p> 
+    			  <textarea name="mensaje" id="mensaje"  class="required" title="Ingrese un Mensaje"></textarea> 
+    		    
+    		    <input name="btn"  type="submit"  id="submit" tabindex="5" value="Enviar Mensaje" /> 
+   		      </form>
+  		  </div>
+           <script type="text/javascript">
+  $(document).ready(function(){
+    $("#fo3").validate();
+  });
+
+$(document).ready(function() {
+   // Esta primera parte crea un loader no es necesaria
+    $().ajaxStart(function() {
+        $('#loading').show();
+        $('#result').hide();
+    }).ajaxStop(function() {
+        $('#loading').hide();
+        $('#result').fadeIn('slow');
+    });
+   // Interceptamos el evento submit
+    $('#form, #fat, #fo3').submit(function() {
+  // Enviamos el formulario usando AJAX
+        $.ajax({
+            type: 'POST',
+            url: $(this).attr('action'),
+            data: $(this).serialize(),
+            // Mostramos un mensaje con la respuesta de PHP
+            success: function(data) {
+                $('#result').html(data);
+            }
+        })        
+        return false;
+    });
+})  
+function limpiar() {
+setTimeout('document.fo3.reset()',1000);
+$("#fields").hide();
+return false;
+
+}
+ $(document).ready(function() { 
+            // bind 'myForm' and provide a simple callback function 
+            $('#fo3').ajaxForm(function() { 
+                alert("Thank you for your comment!"); 
+            }); 
+        }); 
+    </script> 
+
+

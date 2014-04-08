@@ -1,0 +1,84 @@
+@charset "utf-8";
+/* CSS Document */
+*{ font-family: Arial, Helvetica, sans-serif; 
+color:#747474;
+font-size:14px;
+margin:0;
+padding:0;
+}
+body{
+background:url(../images/bg.jpg) repeat-x  #FFFFFF;
+margin:auto;
+}
+#wrap{ width:783px;
+margin:auto;
+}
+#head{
+background:url(../images/head.jpg) no-repeat;
+width:783px;
+height:453px;
+margin:auto;
+}
+/*********************Content***************************/
+#content{
+width:783px;
+}
+#content .derecha{ float:left;
+width:50%;
+}
+#content .izquierda{ float:left; width:50%;
+}
+h1{
+color:#222222;
+font-size:32px;
+font-style:italic;
+margin:35px 0;
+}
+/********************FOOTER*************************/
+#footer{
+height:117px;
+background-color:#242e37;
+clear:both;
+width:100%;
+text-align:center;
+margin-top:15px;
+}
+#footer p{
+color:white;
+font-size:12px;
+padding:0 62px;
+}
+#foot_left{
+margin-left:330px;
+float:left;
+}
+#footer #foot_left ul{
+display:block;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+padding:0px 38px;
+
+}
+#footer #foot_left ul li{
+float:left;
+padding: 15px 2px;
+text-transform:uppercase;
+}
+#footer #foot_left ul li a{
+border-right:1px solid white;
+color:white;
+font-size:9px;
+height:26px;
+padding-right:5px;
+text-decoration:none;
+}
+#footer #foot_left ul li a.lastone{ border:none;}
+#foot_right{ 
+background:transparent url(../images/mapa.jpg) no-repeat scroll 226px 0;
+float:left;
+}
+#foot_right h3{ color:white;
+font-size:22px;
+padding:8px 0 0;
+}

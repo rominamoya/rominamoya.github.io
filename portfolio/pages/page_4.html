@@ -1,0 +1,66 @@
+
+
+
+
+<script type="text/javascript">                                         
+   // we will add our javascript code here           
+   
+$(document).ready(function(){
+$("#ajax-contact-form").submit(function(){
+
+var str = $(this).serialize();
+
+   $.ajax({
+   type: "POST",
+   url: "contact.php",
+   data: str,
+   success: function(msg){
+    
+$("#note").ajaxComplete(function(event, request, settings){
+
+if(msg == 'OK') // Message Sent? Show the 'Thank You' message and hide the form
+{
+result = '<div class="notification_ok">Su consulta ha sido enviada. Gracias!</div>';
+$("#fields").hide();
+}
+else
+{
+result = msg;
+}
+
+$(this).html(result);
+
+});
+
+}
+
+ });
+
+return false;
+
+});
+
+});
+
+ </script>  
+<h2 class="contact">Contactame</h2>
+
+<div id="note"></div>
+<div id="fields">
+<p>Para contactarse conmigo, por favor llene el siguiente formulario. </p>
+
+<form id="ajax-contact-form" action="javascript:alert('success!');">
+<p><label>Nombre <span class="required">*</span></label></p><INPUT class="textbox" type="text" name="name" value="">
+
+<p><label>E-Mail<span class="required">*</span></label></p><INPUT class="textbox" type="text" name="email" value="">
+
+<p><label>Mensaje<span class="required">*</span></label></p><TEXTAREA class="textbox" NAME="message" ROWS="5" COLS="25"></TEXTAREA>
+
+<p><label>&nbsp;</label><INPUT class="button" type="submit" name="submit" value="Enviar mensaje">
+</form>
+</div>
+
+
+
+
+
