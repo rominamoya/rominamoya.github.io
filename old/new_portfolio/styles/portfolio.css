@@ -1,0 +1,144 @@
+body{
+	margin: 0 auto; 
+	font-family: Georgia; 
+	color: #444;
+}
+
+.clear{
+	clear: both;
+}
+/****************header****************************/
+header{		
+	width: 100%;	
+	position: fixed !important;
+}
+
+nav{
+	
+	margin: 0 auto;
+	width: 960px;
+	height:30px;
+}
+
+.standardNav{
+	overflow: visible;	
+	z-index: 9999;
+}
+
+.standardNav ul{
+	display: block;
+	margin: 0;
+	padding: 6px;
+	list-style: none;	
+}
+
+.standardNav.left{
+	margin-left: -645px;
+}
+
+.standardNav li{
+	
+}
+
+.standardNav li a{	
+	background: #666;
+	display: inline;
+	float: left;	 
+	color: white;
+	padding: 6px 12px 6px 12px;
+	margin-bottom: 6px;
+	text-decoration: none; 	
+}	
+
+.standardNav li a:hover, .standardNav li.active a{	
+	background: #222;
+}
+
+/****************Main Content**********************/	
+section{
+	width:78,50%;
+}
+article{
+	min-height: 500px; 
+	padding: 40px; 
+	background: grey 
+}
+
+.section_wrapper {
+	width: 960px;
+	margin: 0 auto;
+	border: solid #666;
+	border-width: 8px 0 2px 0;
+	background: #f5f5f5;
+}
+/****************Aside**********************/
+aside{
+	height:100%;
+	background:#282829; 
+	
+	width:245px;
+}
+
+.gotop{
+	position:fixed;
+	right:15px;
+	bottom:15px;
+	opacity:.3;
+	padding:10px;
+	color:red;
+	display:block;
+	text-decoration:none;
+	text-align:center;
+	font-size:13px;
+	font-weight:bold;
+	z-index:999;
+	transition:all 300ms;
+	-webkit-transition:all 300ms
+}
+/*******************Portfolio********************/
+.port{
+	padding:0px 70px;
+}
+.boxgrid{ 
+	width: 320px; 
+	height: 220px; 
+	margin:10px; 
+	float:left; 
+	background:#161613; 
+border:5px solid #C3F1FB;
+	overflow: hidden; 
+	position: relative; 
+}
+.boxgrid img{ 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	border: 0; 
+}
+.boxgrid p{ 
+	padding: 0 10px; 
+	color:#afafaf; 
+	font-weight:bold; 
+	font:10pt "Lucida Grande", Arial, sans-serif; 
+}
+	
+.boxcaption{ 
+	float: left; 
+	position: absolute; 
+	background: #000; 
+	height: 100px; 
+	width: 100%; 
+	opacity: 0.8; 
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+	}
+.captionfull .boxcaption {
+	top: 160px;
+	left: 0;
+}
+.caption .boxcaption {
+	top: 180px;
+	left: 0;
+}
