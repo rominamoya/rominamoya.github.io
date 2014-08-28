@@ -153,13 +153,13 @@ a:after {
 
 /* Header Wrap */
 #headerwrap {
-	background: url(../assets/img/header-bg.jpg) no-repeat center top;
+	/*background: url(../../assets/img/header.jpg) no-repeat center top;*/
 	margin-top: 60px;
-	padding-top:140px;
+	padding-top:40px;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 500px;
+	min-height: 200px;
 	width: 100%;
 	
     -webkit-background-size: 100%;
@@ -175,12 +175,12 @@ a:after {
 
 #headerwrap h1 {
 	font-size: 80px;
-	color: white;
+	color: black;
 }
 
 #headerwrap h3 {
 	font-size: 20px;
-	color: white;
+	color: black;
 }
 
 /* Intnro Wrap */
